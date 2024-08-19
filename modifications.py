@@ -37,10 +37,24 @@ df.index = df.index + 1
 # Enni's path: "/home/ennirajala/enni-sini/smhi.csv"
 # Sini's path: "/home/sinivuor/enni-sini/etl_project/smhi"
 
-# full csv data. sourced from data, two cities: Helsinki and Tampere
+# full csv data. sourced from SMHI, two cities: Helsinki and Tampere
 df.to_csv("/home/sinivuor/enni-sini/etl_project/smhi.csv", index=False)
  
+
 # FMI data modifications
+fmi_hki_df = pd.read_csv("helsinki_met.csv")
+fmi_tre_df = pd.read_csv("tampere_met.csv")
+
+clean_hki_df = fmi_hki_df[fmi_hki_df['Time [Local time]'] == "10:00"]
+clean_tre_df = fmi_tre_df[fmi_tre_df['Time [Local time]'] == "10:00"]
+
+fmi_df = pd.concat([clean_hki_df, clean_tre_df], axis=0)
+
+# full csv data. sourced from FMI, two cities: Helsinki and Tampere
+fmi_df.to_csv("/home/sinivuor/enni-sini/etl_project/fmi.csv", index=False)
+
+
+
 
 
 
