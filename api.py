@@ -17,11 +17,11 @@ def  _get_weather(lat, lon):
 def _save_weather(json_data, filename):
    
    with open(filename + ".json", "w") as outfile:
-    outfile.write(json_data) 
+    json.dump(json_data, outfile) 
 
 helsinki = _get_weather(60.317949, 24.949388)
-_save_weather(helsinki)
+_save_weather(helsinki, "helsinki")
 
 tampere = _get_weather(61.414710, 23.603993)
-_save_weather(tampere)
+_save_weather(tampere, "tampere")
 

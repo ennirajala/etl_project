@@ -1,20 +1,28 @@
 import pandas as pd
+import json
+import numpy as np
 
-def _json_to_csv(json_data, csv_name):
+with open('helsinki.json', 'r') as f:
+    helsinki_json = json.load(f)
 
-    weather_data = {
-        "date":json_data["timeSeries"][0]["validTime"],
-        "parameters":json_data["timeSeries"][0]["parameters"]
-    }
+date = helsinki_json["timeSeries"][0]["validTime"]
+parameters = helsinki_json["timeSeries"][0]["parameters"]
 
-    weather_data = pd.json_normalize(weather_data) 
+names = ["date"]
+values = []
+values.append(date)
+#units = []
 
-    # Enni's path "/home/ennirajala/enni-sini/test2.csv"
-    # Sini's path "/home/sinivuor/enni-sini/etl_project/tampere.csv"
+for i in range(len(parameters)):
+    names.append(parameters[i]["name"])
+    values.append(parameters[i]["values"][0])
+    #units.append(parameters[i]["unit"])
 
-    df = pd.DataFrame(weather_data)
-    df.to_csv("/home/ennirajala/enni-sini/"+ csv_name +".csv", index=False)
+df = pd.DataFrame(np.array(values).reshape(-1,len(values)), columns=names)
+   
+print(df)
 
 
-data_list = []
+
+
 
