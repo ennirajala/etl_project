@@ -34,7 +34,7 @@ df.index = df.index + 1
 
 # print(df)
 
-# Enni's path: 
+# Enni's path: "/home/ennirajala/enni-sini/smhi.csv"
 # Sini's path: "/home/sinivuor/enni-sini/etl_project/smhi"
 
 # full csv data. sourced from data, two cities: Helsinki and Tampere
