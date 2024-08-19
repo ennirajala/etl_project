@@ -2,6 +2,7 @@ import pandas as pd
 import json
 import numpy as np
 
+# SMHI data modifications
 with open('helsinki.json', 'r') as f:
     helsinki_json = json.load(f)
 
@@ -36,8 +37,10 @@ df.index = df.index + 1
 # Enni's path: 
 # Sini's path: "/home/sinivuor/enni-sini/etl_project/smhi"
 
+# full csv data. sourced from data, two cities: Helsinki and Tampere
 df.to_csv("/home/sinivuor/enni-sini/etl_project/smhi.csv", index=False)
  
+# FMI data modifications
 
 
 
