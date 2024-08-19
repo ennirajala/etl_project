@@ -12,15 +12,6 @@ date = helsinki_json["timeSeries"][0]["validTime"]
 parameters_hki = helsinki_json["timeSeries"][0]["parameters"]
 parameters_tre = tampere_json["timeSeries"][0]["parameters"]
 
-<<<<<<< HEAD
-names = ["date"]
-values = []
-values.append(date)
-
-for i in range(len(parameters)):
-    names.append(parameters[i]["name"])
-    values.append(parameters[i]["values"][0])
-=======
 names = ["date", "location"]
 values_hki = []
 values_hki.append(date)
@@ -42,12 +33,11 @@ df.index = df.index + 1
 
 # print(df)
 
-# Enni's path: 
+# Enni's path: "/home/ennirajala/enni-sini/smhi.csv"
 # Sini's path: "/home/sinivuor/enni-sini/etl_project/smhi"
 
 df.to_csv("/home/sinivuor/enni-sini/etl_project/smhi.csv", index=False)
  
->>>>>>> efe68272807d6deb69a3644cc872b1ab65418252
 
 
 
