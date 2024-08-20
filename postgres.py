@@ -1,16 +1,23 @@
 import os
+import configparser
 import pandas as pd
 import psycopg2 as ps
 from sqlalchemy import create_engine
 
 CURR_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
+config = configparser.ConfigParser()
+config.read(CURR_DIR_PATH + "/config.ini")
+
+# Fetches the api key from your config.ini file
+PW = config.get("DEV", "pw")
+
 # Creates a connection to postgres server
 def postgres_creator():
   return ps.connect(
         dbname="enni_sini",
         user="enni_sini",
-        password="enni_sini",
+        password=PW,
         host="localhost",
         port="5432"
   )
