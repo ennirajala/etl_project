@@ -35,3 +35,4 @@ fmi_data = pd.read_csv(
 # Create two postgres tables according to data source
 smhi_data.to_sql(name="smhi_data", con=postgres_engine, if_exists="replace", index=False)
 fmi_data.to_sql(name="fmi_data", con=postgres_engine, if_exists="replace", index=False)
+
