@@ -1,3 +1,3 @@
-location,pmean,t,msl,wd,ws,r,Date,Time
-Helsinki,0.0,21.5,1010.1,233,4.5,52,2024-08-19,10:00:00Z
-Tampere,0.0,17.4,1009.0,249,3.5,67,2024-08-19,10:00:00Z
+Date,Time,Location,Temperature [°C],Relative humidity [%],Wind speed [m/s],Wind direction [°],Precipitation [mm],Air pressure [hPa]
+2024-08-19,10:00,Vantaa Helsinki-Vantaa airport,21.5,52,4.5,233,0.0,1010.1
+2024-08-19,10:00,Pirkkala Tampere-Pirkkala airport,17.4,67,3.5,249,0.0,1009.0
