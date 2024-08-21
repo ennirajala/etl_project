@@ -1,3 +1,9 @@
 *.ini
 env/
 history_for_git_stuff.txt
+airflow/logs
+airflow/dags/__pycache__
+airflow/airflow.cfg
+airflow/airflow.db
+airflow/standalone_admin_password.txt
+airflow/webserver_config.py
