@@ -1,0 +1,3 @@
+Date,Time,Location,Temperature [°C],Relative humidity [%],Wind speed [m/s],Wind direction [°],Precipitation [mm],Air pressure [hPa]
+2024-08-20,10:00,Vantaa Helsinki-Vantaa airport,22.4,47,4.1,192,0.0,1018.4
+2024-08-20,10:00,Pirkkala Tampere-Pirkkala airport,20.4,50,2.4,189,0.0,1017.0

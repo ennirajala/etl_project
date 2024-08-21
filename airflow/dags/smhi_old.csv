@@ -1,0 +1,3 @@
+date,location,spp,pcat,pmin,pmean,pmax,pmedian,tcc_mean,lcc_mean,mcc_mean,hcc_mean,t,msl,vis,wd,ws,r,tstm,gust,Wsymb2
+2024-08-20T13:00:00Z,Helsinki,-9,0,0.0,0.0,0.0,0.0,2,0,0,2,22.1,1018.2,43.0,192,4.1,47,0,8.8,2
+2024-08-20T13:00:00Z,Tampere,-9,0,0.0,0.0,0.0,0.0,5,1,0,4,20.6,1016.7,41.8,183,2.6,50,0,6.9,3
